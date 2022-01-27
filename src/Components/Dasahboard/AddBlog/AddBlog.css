@@ -1,0 +1,34 @@
+.form input, select,
+textarea {
+    width: 100%;
+    height: 40px;
+    margin: 15px 0;
+    font-size: 16px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+/* .form select {
+    width: 20%;
+    height: 40px;
+    margin: 15px 0;
+    font-size: 16px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding-left: 10px;
+
+} */
+
+.error {
+    color: rgb(233, 83, 83);
+}
+
+.button {
+    width: 100%;
+    background-color: #F37539 !important;
+}
+
+table tr {
+    height: 50px;
+}

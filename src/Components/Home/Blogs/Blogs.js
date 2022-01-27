@@ -4,7 +4,7 @@ import { AppBar, Box, Button, Typography, Toolbar, Container, Grid, CircularProg
 const Blogs = () => {
     const [reviews, setReviews] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/expe')
+        fetch('https://enigmatic-shelf-41985.herokuapp.com/expe')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])

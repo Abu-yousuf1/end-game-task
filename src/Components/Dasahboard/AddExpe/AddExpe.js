@@ -12,7 +12,7 @@ const AddExpe = () => {
     const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/user/${user.email}`)
+        fetch(`https://enigmatic-shelf-41985.herokuapp.com/user/${user.email}`)
             .then(res => res.json())
             .then(data => setUserData(data))
     }, [user])
@@ -21,7 +21,7 @@ const AddExpe = () => {
         data.rating = rating
         data.user = userData
         console.log(data, "exper")
-        fetch(`http://localhost:5000/expe`, {
+        fetch(`https://enigmatic-shelf-41985.herokuapp.com/expe`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

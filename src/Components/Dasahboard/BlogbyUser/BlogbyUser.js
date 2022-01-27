@@ -28,7 +28,7 @@ const BlogByUser = () => {
                     swal("Poof! Your imaginary file has been deleted!", {
                         icon: "success",
                     });
-                    fetch(`http://localhost:5000/blog/${id}`, {
+                    fetch(`https://enigmatic-shelf-41985.herokuapp.com/blog/${id}`, {
                         method: 'DELETE'
                     })
                         .then(res => res.json())
@@ -50,14 +50,14 @@ const BlogByUser = () => {
 
     const handleStatus = (id) => {
 
-        fetch(`http://localhost:5000/blog/${id}`, {
+        fetch(`https://enigmatic-shelf-41985.herokuapp.com/blog/${id}`, {
             method: "PUT"
         })
             .then(res => res.json())
             .then(data => {
                 if (data.modifiedCount > 0) {
                     blog.filter(pd => pd._id !== id)
-                    fetch('http://localhost:5000/blog')
+                    fetch('https://enigmatic-shelf-41985.herokuapp.com/blog')
                         .then(res => res.json())
                         .then(data => setBlog(data))
 
@@ -66,7 +66,7 @@ const BlogByUser = () => {
     }
 
     useEffect(() => {
-        fetch('http://localhost:5000/blog')
+        fetch('https://enigmatic-shelf-41985.herokuapp.com/blog')
             .then(res => res.json())
             .then(data => setBlog(data))
     }, [])

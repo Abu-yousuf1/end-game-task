@@ -108,7 +108,7 @@ const useFirebase = () => {
 
     // admin validation......................
     useEffect(() => {
-        fetch(`http://localhost:5000/isadmin/${user.email}`)
+        fetch(`https://enigmatic-shelf-41985.herokuapp.com/isadmin/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user.email])
@@ -116,7 +116,7 @@ const useFirebase = () => {
 
     const saveUser = (name, email) => {
         const user = { name, email }
-        fetch('http://localhost:5000/user', {
+        fetch('https://enigmatic-shelf-41985.herokuapp.com/user', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

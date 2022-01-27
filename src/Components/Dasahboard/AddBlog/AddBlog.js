@@ -34,7 +34,7 @@ const AddBlog = () => {
                 data.image = image
                 isAdmin ? data.status = "approve" : data.status = "pending"
                 console.log(data, "full data")
-                fetch(`http://localhost:5000/blog`, {
+                fetch(`https://enigmatic-shelf-41985.herokuapp.com/blog`, {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

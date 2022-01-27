@@ -21,7 +21,7 @@ const Experiences = () => {
     const size = 6;
     console.log(page, "pageeeee", pageCount, "pageCount")
     useEffect(() => {
-        fetch(`http://localhost:5000/blogbystatus?page=${page}&size=${size}`)
+        fetch(`https://enigmatic-shelf-41985.herokuapp.com/blogbystatus?page=${page}&size=${size}`)
             .then(res => res.json())
             .then(data => {
                 //     const newData = data.sort((a, b) => 0.5 - Math.random());

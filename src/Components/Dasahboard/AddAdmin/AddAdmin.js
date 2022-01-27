@@ -7,7 +7,7 @@ const AddAdmin = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
         console.log(data, "makadmin")
-        fetch('http://localhost:5000/makeadmin', {
+        fetch('https://enigmatic-shelf-41985.herokuapp.com/makeadmin', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

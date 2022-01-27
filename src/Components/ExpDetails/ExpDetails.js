@@ -11,14 +11,14 @@ const ExpDetails = () => {
     const [reviews, setReviews] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/blogbyid/${id}`)
+        fetch(`https://enigmatic-shelf-41985.herokuapp.com/blogbyid/${id}`)
             .then(res => res.json())
             .then(data => setBlog(data))
     }, [id])
     console.log(reviews, "rew..")
 
     useEffect(() => {
-        fetch(`http://localhost:5000/expeByQuery/${blog.category}`)
+        fetch(`https://enigmatic-shelf-41985.herokuapp.com/expeByQuery/${blog.category}`)
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [blog.category])

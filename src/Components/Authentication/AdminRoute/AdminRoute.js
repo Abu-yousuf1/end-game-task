@@ -1,10 +1,11 @@
 import React from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
-import useAuth from '../../../hook/useAuth';
 import { CircularProgress, Box } from '@mui/material';
+import useAuth from '../../../hook/useAuth';
 
-const AdminRoute = ({ children }) => {
+const AdminRoute = ({ children, ...rest }) => {
     const { user, isLoading, isAdmin } = useAuth();
+    console.log(isAdmin, user.email, "from admin route")
     const location = useLocation();
     if (isLoading) {
         return <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -13,7 +14,8 @@ const AdminRoute = ({ children }) => {
     }
     if (user.email && isAdmin) {
         return children;
-    } else return <Navigate to="/home" state={{ from: location }} />;
+    }
+    return <Navigate to="/home" state={{ from: location }} />;
 };
 
 export default AdminRoute;

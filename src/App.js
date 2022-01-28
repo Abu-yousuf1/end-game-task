@@ -31,10 +31,10 @@ function App() {
           <Route path="/expDetails/:id" element={<ExpDetails />} />
           <Route path='/dashboard' element={<PrivateRoute><Dashboard /></PrivateRoute>}>
             <Route exact path={`/dashboard`} element={<AddBlog />} />
-            <Route exact path={`/dashboard/Blogbyuser`} element={<AdminRoute> <BlogbyUser /></AdminRoute>} />
+            <Route exact path={`/dashboard/Blogbyuser`} element={<PrivateRoute> <BlogbyUser /></PrivateRoute>} />
             <Route exact path={`/dashboard/addExpe`} element={<AddExpe />} />
 
-            <Route exact path={`/dashboard/admin`} element={<AdminRoute><AddAdmin /></AdminRoute>} />
+            <Route exact path={`/dashboard/admin`} element={<PrivateRoute><AddAdmin /></PrivateRoute>} />
           </Route>
         </Routes>
       </BrowserRouter>

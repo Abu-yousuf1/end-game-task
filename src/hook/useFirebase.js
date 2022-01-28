@@ -129,12 +129,13 @@ const useFirebase = () => {
 
 
     return {
+        isAdmin,
         createWithEmailAuth,
         loginWithEmail,
         logOut,
         user,
         isLoading,
-        isAdmin
+
     }
 
 

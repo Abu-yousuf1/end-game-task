@@ -45,7 +45,8 @@ function Dashboard(props) {
             {!isAdmin && <List> <Link to="/dashboard/addExpe" style={{ textDecoration: "none", color: "#F37539", fontWeight: 'bold', margin: "10px" }} > <GridViewIcon sx={{ fontSize: 20, margin: '6px 10px -5px 0' }} />Add  Experience</Link></List>}
             {isAdmin && <Box>
                 <List> <Link to="/dashboard/Blogbyuser" style={{ textDecoration: "none", color: "#F37539", fontWeight: 'bold', margin: "10px" }} > <GridViewIcon sx={{ fontSize: 20, margin: '6px 10px -5px 0' }} />Mange Blog</Link></List>
-                <List> <Link to="/dashboard/admin" style={{ textDecoration: "none", color: "#F37539", fontWeight: 'bold', margin: "10px" }} > <GridViewIcon sx={{ fontSize: 20, margin: '6px 10px -5px 0' }} />Add Admin</Link></List></Box>}
+                <List> <Link to="/dashboard/admin" style={{ textDecoration: "none", color: "#F37539", fontWeight: 'bold', margin: "10px" }} > <GridViewIcon sx={{ fontSize: 20, margin: '6px 10px -5px 0' }} />Add Admin</Link></List>
+            </Box>}
             <List> <Typography variant="body3" onClick={logOut} style={{ textDecoration: "none", color: "#F37539", fontWeight: 'bold', margin: "10px" }} > <LogoutIcon sx={{ fontSize: 20, margin: '6px 10px -5px 0' }} />LogOut</Typography></List>
 
         </div>

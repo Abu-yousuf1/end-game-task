@@ -3,7 +3,7 @@ import { Navigate, useLocation } from 'react-router-dom';
 import useAuth from '../../../hook/useAuth';
 import { CircularProgress, Box } from '@mui/material';
 
-const PrivateRoute = ({ children }) => {
+const PrivateRoute = ({ children, ...rest }) => {
     const { user, isLoading } = useAuth();
     const location = useLocation();
     if (isLoading) {
@@ -13,7 +13,8 @@ const PrivateRoute = ({ children }) => {
     }
     if (user.email) {
         return children;
-    } else return <Navigate to="/login" state={{ from: location }} />;
+    }
+    return <Navigate to="/login" state={{ from: location }} />;
 };
 
 export default PrivateRoute;
